@@ -1,0 +1,8 @@
+browser=edge
+url=http://www.amazon.ca/
+Amount=365
+email=amazonuser@gmail.com
+sendername=Tester User
+sendermessage=Hello this is  amazon gift card adding to card...Testing in progress
+amazonaccountemail=amazontestjava@gmail.com
+amazonaccountpassword=Amazon@123

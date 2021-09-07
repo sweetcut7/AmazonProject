@@ -1,0 +1,112 @@
+# Created at 2021-09-06T22:52:49.004
+Thread dump for process (9576@DESKTOP-KJEU6A0) after 30 seconds shutdown timeout:
+"surefire-forkedjvm-last-ditch-daemon-shutdown-thread-30s" 
+   java.lang.Thread.State: RUNNABLE
+        at sun.management.ThreadImpl.getThreadInfo1(Native Method)
+        at sun.management.ThreadImpl.getThreadInfo(ThreadImpl.java:178)
+        at org.apache.maven.surefire.booter.ForkedBooter.generateThreadDump(ForkedBooter.java:649)
+        at org.apache.maven.surefire.booter.ForkedBooter.access$400(ForkedBooter.java:82)
+        at org.apache.maven.surefire.booter.ForkedBooter$7.run(ForkedBooter.java:465)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+        at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+        at java.lang.Thread.run(Thread.java:748)
+
+"Okio Watchdog" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:460)
+        at okio.AsyncTimeout.awaitTimeout(AsyncTimeout.java:361)
+        at okio.AsyncTimeout$Watchdog.run(AsyncTimeout.java:312)
+
+"OkHttp ConnectionPool" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:460)
+        at okhttp3.ConnectionPool$1.run(ConnectionPool.java:67)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+        at java.lang.Thread.run(Thread.java:748)
+
+"Exec Stream Pumper" 
+   java.lang.Thread.State: RUNNABLE
+        at java.io.FileInputStream.readBytes(Native Method)
+        at java.io.FileInputStream.read(FileInputStream.java:233)
+        at org.apache.commons.exec.StreamPumper.run(StreamPumper.java:107)
+        at java.lang.Thread.run(Thread.java:748)
+
+"Exec Stream Pumper" 
+   java.lang.Thread.State: RUNNABLE
+        at java.io.FileInputStream.readBytes(Native Method)
+        at java.io.FileInputStream.read(FileInputStream.java:255)
+        at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+        at java.io.BufferedInputStream.read1(BufferedInputStream.java:286)
+        at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+        at java.io.FilterInputStream.read(FilterInputStream.java:107)
+        at org.apache.commons.exec.StreamPumper.run(StreamPumper.java:107)
+        at java.lang.Thread.run(Thread.java:748)
+
+"Exec Default Executor" 
+   java.lang.Thread.State: RUNNABLE
+        at java.lang.ProcessImpl.waitForInterruptibly(Native Method)
+        at java.lang.ProcessImpl.waitFor(ProcessImpl.java:507)
+        at org.apache.commons.exec.DefaultExecutor.executeInternal(DefaultExecutor.java:364)
+        at org.apache.commons.exec.DefaultExecutor.access$200(DefaultExecutor.java:48)
+        at org.apache.commons.exec.DefaultExecutor$1.run(DefaultExecutor.java:200)
+        at java.lang.Thread.run(Thread.java:748)
+
+"surefire-forkedjvm-command-thread" 
+   java.lang.Thread.State: RUNNABLE
+        at java.io.FileInputStream.readBytes(Native Method)
+        at java.io.FileInputStream.read(FileInputStream.java:255)
+        at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+        at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+        at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+        at java.io.BufferedInputStream.read1(BufferedInputStream.java:286)
+        at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+        at org.apache.maven.surefire.api.util.internal.Channels$3.readImpl(Channels.java:214)
+        at org.apache.maven.surefire.api.util.internal.AbstractNoninterruptibleReadableChannel.read(AbstractNoninterruptibleReadableChannel.java:54)
+        at org.apache.maven.surefire.booter.spi.LegacyMasterProcessChannelDecoder.decode(LegacyMasterProcessChannelDecoder.java:80)
+        at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:343)
+        at java.lang.Thread.run(Thread.java:748)
+
+"Attach Listener" 
+   java.lang.Thread.State: RUNNABLE
+
+"Signal Dispatcher" 
+   java.lang.Thread.State: RUNNABLE
+
+"Finalizer" 
+   java.lang.Thread.State: WAITING
+        at java.lang.Object.wait(Native Method)
+        at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+        at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:165)
+        at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:216)
+
+"Reference Handler" 
+   java.lang.Thread.State: WAITING
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+        at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+
+"main" 
+   java.lang.Thread.State: RUNNABLE
+        at java.util.IdentityHashMap$KeySet.iterator(IdentityHashMap.java:977)
+        at java.lang.ApplicationShutdownHooks.runHooks(ApplicationShutdownHooks.java:101)
+        at java.lang.ApplicationShutdownHooks$1.run(ApplicationShutdownHooks.java:46)
+        at java.lang.Shutdown.runHooks(Shutdown.java:123)
+        at java.lang.Shutdown.sequence(Shutdown.java:167)
+        at java.lang.Shutdown.exit(Shutdown.java:212)
+        at java.lang.Runtime.exit(Runtime.java:109)
+        at java.lang.System.exit(System.java:971)
+        at org.apache.maven.surefire.booter.ForkedBooter.acknowledgedExit(ForkedBooter.java:422)
+        at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:186)
+        at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)
+        at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)
+
+
+
